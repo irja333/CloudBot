@@ -41,11 +41,12 @@ let handler = async (m, { conn }) => {
   let neww = performance.now()
   let speed = neww - old
   m.reply(`
-
- Speed : _${latensi.toFixed(4)} Second_ \n\n Runtime : _${runtime(process.uptime())}_
-
- *� IRJA*
-`.trim())
+┌───────⭓
+│⭔ Speed : _${latensi.toFixed(4)} Second_ \n│\n│⭔ Runtime : _${runtime(process.uptime())}_
+│
+│ *© IRJA*
+└───────⭓
+`.trim())
 }
 handler.help = ['ping', 'speed']
 handler.tags = ['info', 'tools']
