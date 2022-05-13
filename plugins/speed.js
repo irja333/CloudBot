@@ -41,8 +41,8 @@ let handler = async (m, { conn }) => {
   let neww = performance.now()
   let speed = neww - old
   m.reply(`
- Merespon dalam ${speed} millidetik
-By : *IRJA*
+  Merespon dalam ${speed} millidetik
+_By : *IRJA*_
 `.trim())
 }
 handler.help = ['ping', 'speed']
