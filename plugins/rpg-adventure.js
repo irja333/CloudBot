@@ -25,10 +25,10 @@ let handler = async (m, { usedPrefix }) => {
     }
     text += `\n│╰────────────┈ ⳹\n│ 𝐂𝐥𝐨𝐮𝐝𝐁𝐨𝐭-𝐌𝐃 \n╰━━━━━━━━━━━━┈ ❋ཻུ۪۪⸙`
     const poid = 'https://i.ibb.co/64mn29X/images-3.jpg'
-    conn.sendHydrated(m.chat, '🄰🄳🅅🄴🄽🅃🅄🅁🄴', text.trim(), poid, 'https://github.com/itsmedell', '𝐆𝐢𝐭𝐡𝐮𝐛', null, null, [
-      ['𝐃𝐨𝐧𝐚𝐭𝐞', '/donasi'],
-      ['𝐈𝐧𝐯𝐞𝐧𝐭𝐨𝐫𝐲', '/inv'],
-      ['𝐂𝐫𝐞𝐚𝐭𝐨𝐫', '/owner']
+    conn.sendHydrated(m.chat, '🄰🄳🅅🄴🄽🅃🅄🅁🄴', text.trim(), poid, 'https://instagram.com/irja_official', 'Instagram', null, null, [
+      ['Group', '/donasi'],
+      ['Inventory', '/inv'],
+      ['Owner', '/owner']
     ], m)
     user.lastadventure = new Date * 1
 }
