@@ -11,13 +11,13 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       if (!m.isGroup) {
         if (!isOwner) {
           global.dfail('group', m, conn)
-          throw true
+          throw false
         }
       } else if (!isAdmin) {
         global.dfail('admin', m, conn)
         throw false
       }
-      chat.welcome = isEnable
+      chat.welcome = Enable
       break
     // case 'detect':
     //   if (!m.isGroup) {
@@ -35,7 +35,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       if (m.isGroup) {
         if (!(isAdmin || isOwner)) {
           global.dfail('admin', m, conn)
-          throw true
+          throw false
         }
       }
       chat.delete = isEnable
