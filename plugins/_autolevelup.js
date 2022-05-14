@@ -15,4 +15,4 @@ gunakan *.profile* untuk mengecek
 	`.trim())
     }
 }
-export const disabled = false
+export const disabled = true
