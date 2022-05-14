@@ -42,6 +42,7 @@ let handler = async (m, { conn }) => {
   let speed = neww - old
   m.reply(`
   Merespon dalam ${speed} millidetik
+Runtime : _${runtime(process.uptime())}_
 _By : *IRJA*_
 `.trim())
 }
