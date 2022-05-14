@@ -5,18 +5,18 @@ let handler = async (m, { conn, text }) => {
   if (!m.quoted) throw 'Quoted the sticker!'
   let stiker = false
   try {
-    let [packname, ...author] = text.split('|')
-    author = (author || []).join('|')
+    let [packname, ...author] = text.split('© IRJA')
+    author = (author || []).join('IG : irja_official')
     let mime = m.quoted.mimetype || ''
     if (!/webp/.test(mime)) throw 'Reply sticker!'
     let img = await m.quoted.download()
     if (!img) throw 'Reply a sticker!'
-    stiker = await addExif(img, packname || '', author || '')
+    stiker = await addExif(img, packname || '© IRJA', author || 'IG : irja_official')
   } catch (e) {
     console.error(e)
     if (Buffer.isBuffer(e)) stiker = e
   } finally {
-    if (stiker) conn.sendFile(m.chat, stiker, 'wm.webp', '', m, false, { asSticker: false })
+    if (stiker) conn.sendFile(m.chat, stiker, 'wm.webp', '© IRJA', m, false, { asSticker: false })
     else throw 'Conversion failed'
   }
 }
