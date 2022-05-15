@@ -2,7 +2,7 @@
 import fetch from 'node-fetch'
 
 let handler = async(m, { conn }) => {
-    let img = await fetch(`https://storage.caliph71.xyz/${gr()+'.png'}`).then(a => a.buffer())
+    let img = await fetch(`https://i.ibb.co/cThtxtv/thumb.jpg/${gr()+'.png'}`).then(a => a.buffer())
     await conn.sendFile(m.chat, img, 'lewn.png', '', m)
 }
 handler.help = ['lewd']
